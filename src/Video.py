@@ -6,18 +6,16 @@ class Video:
         self.length = length
         self.date = date
 
-    def setName(self, name):
-        name
-
-class Serie(Video):
-    def __init__(self, name, gender, score, length, date):
-        Video.__init__(self, name, gender, score, length, date)
-
+    # def setName(self, Newname):
+    #     self.name=Newname
 
 class Movie(Video):
     def __init__(self, name, gender, score, length, date):
         super().__init__(name, gender, score, length, date)
 
-class PollitosEnFuga(Movie):
-    def __init__(self):
-        super().__init__('Pollitos En Fuga', 'Suspenso Animado', 'Cinco Polliestrellas', 120, 2000)
+class Serie(Video):
+    def __init__(self, name, gender, score, temporada, date,length,numEpisode,nombreEpisodio):
+        super().__init__(nombreEpisodio, gender, score, length, date)
+        self.numEpisode=numEpisode
+        self.nameS = name
+        self.temporada = temporada
